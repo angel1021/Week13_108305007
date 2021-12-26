@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
+	<title>Guessing Number (Advanced Level)</title>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+		<br>
+		<h1>Guessing Game</h1>
+		<form>
+			<label>Your Guess (1 ~ 100)</label>
+			<br>
+			<input type="Number" name="guess" id="guess">
+		</form>
+		<br>
+		<input type="button" name="guesswhat" id="output" value="Play!" onclick="guessing()">
+		<br>
+		<br>
+		<table id = "result">
+			<tr><td>Result :</td></tr>
+		</table>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		var answer = Math.floor(Math.random() * 99 + 1);
+		var left = 1;
+		var right = 100;
+
+		function guessing(){
+
+			var i = parseInt(document.getElementById("guess").value) ;
+
+			if (i != answer){
+				if ( i < answer ){
+					if ( i > left ){
+						left = i ;
+					} 
+					
+					let tr = document.createElement("tr");
+					let td = document.createElement("td");
+					let text = document.createTextNode(left + "~" + right)
+
+					td.appendChild(text)
+					tr.appendChild(td)
+					document.getElementById("result").appendChild(tr)
+					
+					
+				} else if ( i > answer) {
+					if ( i < right) {
+						console.log(2);
+						right = i;
+					}
+
+					let tr = document.createElement("tr");
+					let td = document.createElement("td");
+					let text = document.createTextNode(left + "~" + right)
+
+					td.appendChild(text)
+					tr.appendChild(td)
+					document.getElementById("result").appendChild(tr)	
+
+					}
+
+			} else {
+				alert("YOU'RE RIGHT")
+				location.reload()
+			}
+		}
+
+	</script>
+
+</body>
+</html>

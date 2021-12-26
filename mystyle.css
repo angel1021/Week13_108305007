@@ -1,0 +1,53 @@
+body{
+	font-family: Rubik, sans-serif;
+}
+
+#output{
+	width: 120px;
+	height: 30px;
+	color: white;
+	font-family: Rubik, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #59344F;
+}
+
+#output:hover{
+	background-color: black;
+	color: white;
+}
+
+.container{
+	background-color: #F5E0B7;
+	height: 500px;
+	width: 400px;
+	margin-left:37%;
+	border-radius: 30px;
+}
+
+.box{
+	margin-left: 20px;
+}
+
+h1{
+	text-align: center;
+	font-family: Spectral, serif;
+	color: #867E7B;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+td{
+	border-style: dotted dashed solid double;
+	width: 350px;
+	height: 23px;
+	border-color: #867E7B;
+	border-width: 3px;
+	border-radius: 5px;
+}
+
+#guess{
+	width: 350px;
+	height: 23px;
+	border-radius: 5px;
+}
